@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "787087184098",
+    "project_id": "wt-gym",
+    "storage_bucket": "wt-gym.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787087184098:android:2c92616f21661f22064ebb",
+        "android_client_info": {
+          "package_name": "edu.bluejack23_1.wtgym"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVEe5WJK87nRAXv5Y9ELdmV8Z_Pd3tXv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

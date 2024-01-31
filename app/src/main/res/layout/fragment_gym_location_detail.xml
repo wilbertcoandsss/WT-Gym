@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color">
+
+            <!-- TODO: Update blank fragment layout -->
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/gymLocationImg"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gymNameLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/sf_bold"
+                android:text="asdasd"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.111"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymLocationImg" />
+
+            <TextView
+                android:id="@+id/gymAddressLbl"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_light"
+                android:text="ads"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.170"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymNameLbl"
+                app:layout_constraintVertical_bias="0.0"
+                android:maxWidth="180dp"
+                android:layout_width="180dp"
+                android:inputType="textMultiLine" />
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:elevation="3dp"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.093"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymAddressLbl"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:elevation="3dp"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.137"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymAddressLbl"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:elevation="3dp"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymAddressLbl"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:elevation="3dp"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.223"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymAddressLbl"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:elevation="3dp"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymAddressLbl"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <TextView
+                android:id="@+id/gymRatingLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/sf_bold"
+                android:text="asd"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/star5"
+                app:layout_constraintStart_toEndOf="@id/star5"
+                app:layout_constraintTop_toTopOf="@id/star5"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/reviewBtn"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/primary_btn"
+                android:fontFamily="@font/sf_bold"
+                android:text="+ Insert Review"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:cornerRadius="30px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.89"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymLocationImg"
+                app:layout_constraintVertical_bias="0.143" />
+
+            <View
+                android:id="@+id/horizontalLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymRatingLbl" />
+
+            <TextView
+                android:id="@+id/gymReviewAndRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sf_bold"
+                android:text="Ratings And Reviews"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.207"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalLine" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReviews"
+                android:layout_width="391dp"
+                android:layout_height="480dp"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gymReviewAndRating"
+                tools:listitem="@layout/list_item_review" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

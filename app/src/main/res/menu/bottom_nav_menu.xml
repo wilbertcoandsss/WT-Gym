@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Exercises"
+        android:id="@+id/home"
+        android:icon="@drawable/barbel"
+        />
+    <item android:title="Favorite"
+        android:id="@+id/favorite"
+        android:icon="@drawable/baseline_favorite_24"/>
+    <item android:title="Gym Location"
+        android:id="@+id/location"
+        android:icon="@drawable/baseline_location_on_24"/>
+    <item android:title="User"
+        android:id="@+id/user"
+        android:icon="@drawable/baseline_person_24"
+        />
+</menu>

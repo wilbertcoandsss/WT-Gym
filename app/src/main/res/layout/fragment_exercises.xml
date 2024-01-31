@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg_color"
+    tools:context=".view.ExercisesFragment">
+
+    <TextView
+        android:id="@+id/exercisesTypeLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_bold"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="392dp"
+        android:layout_height="47dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/search_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        app:queryHint="Search exercises..."
+        app:searchIcon="@drawable/baseline_search_24" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/insertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Insert"
+        app:backgroundTint="@color/dark_input"
+        android:textColor="@color/white"
+        app:iconTint="@color/white"
+        app:icon="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/progBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rvExercises"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="29dp"
+        android:layout_height="31dp"
+        android:elevation="3dp"
+        android:src="@drawable/baseline_filter_alt_24"
+        app:layout_constraintBottom_toBottomOf="@+id/filterBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/filterBtn1"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="@+id/filterBtn1"
+        app:layout_constraintTop_toTopOf="@+id/filterBtn1"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <Button
+        android:id="@+id/filterBtn1"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/dark_input"
+        android:elevation="0dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="Type"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filterBtn2"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="29dp"
+        android:layout_height="31dp"
+        android:elevation="3dp"
+        android:src="@drawable/baseline_filter_alt_24"
+        app:layout_constraintBottom_toBottomOf="@+id/filterBtn2"
+        app:layout_constraintEnd_toEndOf="@+id/filterBtn2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/filterBtn2"
+        app:layout_constraintTop_toTopOf="@+id/filterBtn2"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <Button
+        android:id="@+id/filterBtn2"
+        android:layout_width="126dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/dark_input"
+        android:elevation="0dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="Muscles"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="29dp"
+        android:layout_height="31dp"
+        android:elevation="3dp"
+        android:src="@drawable/baseline_filter_alt_24"
+        app:layout_constraintBottom_toBottomOf="@+id/filterBtn3"
+        app:layout_constraintEnd_toEndOf="@+id/filterBtn3"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toEndOf="@+id/filterBtn2"
+        app:layout_constraintTop_toTopOf="@+id/filterBtn3"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <Button
+        android:id="@+id/filterBtn3"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/dark_input"
+        android:elevation="0dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="Equipment"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toEndOf="@+id/filterBtn2"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        app:layout_constraintVertical_bias="0.066" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExercises"
+        android:layout_width="391dp"
+        android:layout_height="406dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortTxt"
+        tools:listitem="@layout/list_item" />
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/rvExercises"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortTxt"
+        app:layout_constraintVertical_bias="1.0"></ProgressBar>
+
+    <TextView
+        android:id="@+id/lblTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_roundedcorner"
+        android:fontFamily="@font/sf_bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="1dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="awikwok"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toEndOf="@+id/exercisesTypeLbl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <TextView
+        android:id="@+id/sortTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_regular"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterBtn2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.bluejack23_1.wtgym.viewmodel.PageNavigationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/bg_color"
+        tools:context=".view.LandingPage">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="257dp"
+            android:layout_height="251dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.087"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/titleLandingPage"
+            android:layout_width="286dp"
+            android:layout_height="77dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="Welcome to the\n Future of Fitness."
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.094" />
+
+        <Button
+            android:id="@+id/goToRegisterPage"
+            android:layout_width="269dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/primary_btn"
+            android:fontFamily="@font/sf_bold"
+            android:text="I'm New"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="30px"
+            android:onClick="@{viewModel::onGoToRegisterClick}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleLandingPage"
+            app:layout_constraintVertical_bias="0.197" />
+
+        <Button
+            android:id="@+id/goToLoginPage"
+            android:layout_width="269dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/dark_input"
+            android:fontFamily="@font/sf_bold"
+            android:text="Login"
+            android:onClick="@{viewModel::onGoToLoginClick}"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="30px"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goToRegisterPage"
+            app:layout_constraintVertical_bias="0.491" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already a member?"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_light"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/goToLoginPage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goToRegisterPage"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

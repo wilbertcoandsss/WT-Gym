@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:fontFamily="@font/sf_bold"
+        android:gravity="center"
+        android:text="Sort By Muscles"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/filtering1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="All"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/filtering2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="Chest"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/filtering3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="Arms"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/filtering4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/filtering5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="Legs"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/filtering6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="Abdominal"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RadioGroup>
+</LinearLayout>

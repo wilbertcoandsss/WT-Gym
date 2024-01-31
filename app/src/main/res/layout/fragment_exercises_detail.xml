@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.bluejack23_1.wtgym.viewmodel.ExercisesViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:fillViewport="true"
+        bind:context=".view.ExercisesDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            bind:context=".view.ExercisesDetailFragment">
+
+            <TextView
+                android:id="@+id/exerciseNameLbl"
+                android:layout_width="287dp"
+                android:layout_height="90dp"
+                android:fontFamily="@font/sf_bold"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.338"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.038" />
+
+            <ImageView
+                android:id="@+id/exerciseCover"
+                android:layout_width="439dp"
+                android:layout_height="223dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerciseNameLbl"
+                app:layout_constraintVertical_bias="0.037"
+                bind:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/timeLbl"
+                android:layout_width="149dp"
+                android:layout_height="87dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Awikwok"
+                android:textAlignment="viewEnd"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.144"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerciseCover"
+                app:layout_constraintVertical_bias="0.068"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="50dp"
+                android:layout_height="56dp"
+                android:src="@drawable/baseline_access_time_24"
+                app:layout_constraintBottom_toBottomOf="@+id/timeLbl"
+                app:layout_constraintEnd_toEndOf="@+id/timeLbl"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="@+id/timeLbl"
+                app:layout_constraintTop_toTopOf="@+id/timeLbl"
+                app:layout_constraintVertical_bias="0.483" />
+
+            <TextView
+                android:id="@+id/burnLbl"
+                android:layout_width="149dp"
+                android:layout_height="87dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingEnd="10dp"
+                android:text="Awikwok"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.828"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerciseCover"
+                app:layout_constraintVertical_bias="0.068"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="50dp"
+                android:layout_height="56dp"
+                android:src="@drawable/baseline_local_fire_department_24"
+                app:layout_constraintBottom_toBottomOf="@+id/burnLbl"
+                app:layout_constraintEnd_toEndOf="@+id/burnLbl"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="@+id/burnLbl"
+                app:layout_constraintTop_toTopOf="@+id/burnLbl"
+                app:layout_constraintVertical_bias="0.483" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Descriptions"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeLbl"
+                app:layout_constraintVertical_bias="0.041"
+                bind:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/descriptionLbl"
+                android:layout_width="360dp"
+                android:layout_height="90dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:padding="8dp"
+                android:text="Awikwok"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:paddingStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.032"
+                bind:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/stepsLbl"
+                android:layout_width="360dp"
+                android:layout_height="90dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:padding="8dp"
+                android:text="Steps"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:paddingStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.511"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:layout_constraintVertical_bias="0.046"
+                bind:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="How To Do"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.137"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionLbl"
+                app:layout_constraintVertical_bias="0.046"
+                bind:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Target Muscles"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.158"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stepsLbl"
+                app:layout_constraintVertical_bias="0.058"
+                bind:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/targetMuscles1"
+                android:layout_width="109dp"
+                android:layout_height="114dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="Chest"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.127"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintVertical_bias="0.079"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/targetMuscles1img"
+                android:layout_width="69dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/targetMuscles1"
+                app:layout_constraintEnd_toEndOf="@+id/targetMuscles1"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="@+id/targetMuscles1"
+                app:layout_constraintTop_toTopOf="@+id/targetMuscles1"
+                app:layout_constraintVertical_bias="0.277"
+                bind:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/targetMuscles2"
+                android:layout_width="109dp"
+                android:layout_height="114dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="Arms"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintVertical_bias="0.079"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/targetMuscles2img"
+                android:layout_width="69dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/targetMuscles2"
+                app:layout_constraintEnd_toEndOf="@+id/targetMuscles2"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="@+id/targetMuscles2"
+                app:layout_constraintTop_toTopOf="@+id/targetMuscles2"
+                app:layout_constraintVertical_bias="0.277"
+                bind:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/targetMuscles3"
+                android:layout_width="109dp"
+                android:layout_height="114dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="Back"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintVertical_bias="0.079"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/targetMuscles3img"
+                android:layout_width="69dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/targetMuscles3"
+                app:layout_constraintEnd_toEndOf="@+id/targetMuscles3"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="@+id/targetMuscles3"
+                app:layout_constraintTop_toTopOf="@+id/targetMuscles3"
+                app:layout_constraintVertical_bias="0.277"
+                bind:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Alternatives"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.158"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/targetMuscles1"
+                app:layout_constraintVertical_bias="0.058"
+                bind:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/alternative1"
+                android:layout_width="109dp"
+                android:layout_height="155dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="Pull Up"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.142"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintVertical_bias="0.081"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/alternative1img"
+                android:layout_width="69dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/alternative1"
+                app:layout_constraintEnd_toEndOf="@+id/alternative1"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="@+id/alternative1"
+                app:layout_constraintTop_toTopOf="@+id/alternative1"
+                app:layout_constraintVertical_bias="0.277"
+                bind:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/alternative2"
+                android:layout_width="109dp"
+                android:layout_height="155dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="Chin Up"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintVertical_bias="0.079"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/alternative2img"
+                android:layout_width="69dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/alternative2"
+                app:layout_constraintEnd_toEndOf="@+id/alternative2"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="@+id/alternative2"
+                app:layout_constraintTop_toTopOf="@+id/alternative2"
+                app:layout_constraintVertical_bias="0.277"
+                bind:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/alternative3"
+                android:layout_width="109dp"
+                android:layout_height="155dp"
+                android:background="@drawable/rounded_item_list"
+                android:fontFamily="@font/sf_regular"
+                android:gravity="bottom|center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="Blablbal"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintVertical_bias="0.079"
+                bind:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/alternative3img"
+                android:layout_width="69dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/alternative3"
+                app:layout_constraintEnd_toEndOf="@+id/alternative3"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="@+id/alternative3"
+                app:layout_constraintTop_toTopOf="@+id/alternative3"
+                app:layout_constraintVertical_bias="0.277"
+                bind:srcCompat="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/doneBtn"
+                android:layout_width="362dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="75dp"
+                android:text="Done"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.68"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alternative1"
+                app:layout_constraintVertical_bias="0.286" />
+
+            <ImageView
+                android:id="@+id/favIcon"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                app:layout_constraintBottom_toTopOf="@+id/exerciseCover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.954"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.478"
+                app:srcCompat="@drawable/baseline_favorite_24"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    >
+
+    <TextView
+        android:id="@+id/titleLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:fontFamily="@font/sf_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/eventLbl"
+        android:layout_width="364dp"
+        android:layout_height="103dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/sf_light"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="Details"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+</LinearLayout>

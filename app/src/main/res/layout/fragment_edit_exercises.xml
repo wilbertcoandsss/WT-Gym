@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.EditExercisesFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="edu.bluejack23_1.wtgym.viewmodel.ExercisesViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Update Exercises"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.112"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.023" />
+
+            <Button
+                android:id="@+id/uploadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_item_primary"
+                android:text="Upload Image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.092"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insertImage"
+                app:layout_constraintVertical_bias="0.178" />
+
+            <Button
+                android:id="@+id/updateExercisesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="55dp"
+                android:background="@drawable/rounded_item_primary"
+                android:text="Update Exercise"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/uploadBtn"
+                app:layout_constraintVertical_bias="0.422" />
+
+            <ImageView
+                android:id="@+id/previewImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.884"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insertImage"
+                app:layout_constraintVertical_bias="0.082"
+                tools:src="@tools:sample/avatars" />
+
+            <EditText
+                android:id="@+id/exerNameLbl"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:hint="Exercises name..."
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:layout_constraintVertical_bias="0.044" />
+
+            <EditText
+                android:id="@+id/exerTimeLbl"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:hint="Exercises time..."
+                android:inputType="number"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                app:layout_constraintVertical_bias="0.016" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.067"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:layout_constraintVertical_bias="0.021" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Exercise Time (min)"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerNameLbl"
+                app:layout_constraintVertical_bias="0.01" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Burn Calories (kcal)"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.098"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerTimeLbl"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Steps"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerDescLbl"
+                app:layout_constraintVertical_bias="0.021" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Workout Type"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerStepsLbl"
+                app:layout_constraintVertical_bias="0.045" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Target Muscles"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.072"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dropdown_type"
+                app:layout_constraintVertical_bias="0.028" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.074"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exerCaloriesLbl"
+                app:layout_constraintVertical_bias="0.017" />
+
+            <EditText
+                android:id="@+id/exerCaloriesLbl"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:hint="Exercises time..."
+                android:inputType="number"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22"
+                app:layout_constraintVertical_bias="0.016" />
+
+            <EditText
+                android:id="@+id/exerDescLbl"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:hint="Exercises description..."
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <EditText
+                android:id="@+id/exerStepsLbl"
+                android:layout_width="365dp"
+                android:layout_height="231dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:gravity="top|start"
+                android:hint="1. Example \n2. Example..."
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                app:layout_constraintVertical_bias="0.013" />
+
+            <TextView
+                android:id="@+id/dropdown_muscles"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:fontFamily="@font/sf_bold"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Select Target Muscles"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26"
+                app:layout_constraintVertical_bias="0.029" />
+
+            <TextView
+                android:id="@+id/dropdown_type"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:fontFamily="@font/sf_bold"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Select Workout Type"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25"
+                app:layout_constraintVertical_bias="0.036" />
+
+            <TextView
+                android:id="@+id/insertImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="272dp"
+                android:fontFamily="@font/sf_bold"
+                android:text="Exercise Image"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.072"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dropdown_variation"
+                app:layout_constraintVertical_bias="0.302" />
+
+            <TextView
+                android:id="@+id/equipmentLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Workout Equipment"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/insertImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dropdown_muscles"
+                app:layout_constraintVertical_bias="0.094" />
+
+            <TextView
+                android:id="@+id/dropdown_equipment"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:fontFamily="@font/sf_bold"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Select Equipment"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/equipmentLbl"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/sf_bold"
+                android:text="Workout Variation"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/dropdown_variation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dropdown_equipment" />
+
+            <TextView
+                android:id="@+id/dropdown_variation"
+                android:layout_width="363dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="428dp"
+                android:background="@drawable/edittext_roundedcorner"
+                android:ems="10"
+                android:fontFamily="@font/sf_bold"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Select Variation"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.338"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView28" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.214"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateExercisesBtn"
+                app:layout_constraintVertical_bias="0.257" />
+
+            <TextView
+                android:id="@+id/loadingLbl"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_bold"
+                android:text="Saving your data..."
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.197"
+                app:layout_constraintStart_toEndOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/updateExercisesBtn"
+                app:layout_constraintVertical_bias="0.343" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

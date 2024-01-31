@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/bg_color"
+    tools:context=".view.ExercisesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/gymLocationLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_bold"
+        android:text="Gym Location"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <Button
+        android:id="@+id/filterBtn1"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:backgroundTint="@color/dark_input"
+        android:elevation="0dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="City"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gymLocationLbl"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="29dp"
+        android:layout_height="31dp"
+        android:elevation="3dp"
+        android:src="@drawable/baseline_filter_alt_24"
+        app:layout_constraintBottom_toBottomOf="@+id/filterBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/filterBtn1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/filterBtn1"
+        app:layout_constraintTop_toTopOf="@+id/filterBtn1"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGymLocation"
+        android:layout_width="391dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="32dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterBtn1"
+        tools:listitem="@layout/list_item_gym" />
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvGymLocation"
+        app:layout_constraintVertical_bias="0.515"></ProgressBar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

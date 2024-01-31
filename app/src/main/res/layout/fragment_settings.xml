@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.bluejack23_1.wtgym.viewmodel.AccountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        bind:context=".view.MyAccountFragment">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_bold"
+            android:text="Profile Settings"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.048" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_bold"
+            android:text="Account Settings"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightLblBtn"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <TextView
+            android:id="@+id/nameLblBtn"
+            android:layout_width="343dp"
+            android:layout_height="51dp"
+            android:background="@drawable/rounded_item_list"
+            android:fontFamily="@font/sf_light"
+            android:gravity="center"
+            android:paddingStart="-145dp"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            app:layout_constraintVertical_bias="0.042" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="37dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_person_24"
+            app:layout_constraintBottom_toBottomOf="@+id/nameLblBtn"
+            app:layout_constraintEnd_toEndOf="@+id/nameLblBtn"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="@+id/nameLblBtn"
+            app:layout_constraintTop_toTopOf="@+id/nameLblBtn"
+            app:layout_constraintVertical_bias="0.562" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="38dp"
+            android:layout_height="34dp"
+            android:src="@drawable/baseline_navigate_next_24"
+            app:layout_constraintBottom_toBottomOf="@+id/nameLblBtn"
+            app:layout_constraintEnd_toEndOf="@+id/nameLblBtn"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="@+id/nameLblBtn"
+            app:layout_constraintTop_toTopOf="@+id/nameLblBtn"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/heightLblBtn"
+            android:layout_width="343dp"
+            android:layout_height="51dp"
+            android:background="@drawable/rounded_item_list"
+            android:fontFamily="@font/sf_light"
+            android:gravity="center"
+            android:paddingStart="-145dp"
+            android:text="Height"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLblBtn"
+            app:layout_constraintVertical_bias="0.052" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="37dp"
+            android:layout_height="35dp"
+            android:src="@drawable/height"
+            app:layout_constraintBottom_toBottomOf="@+id/heightLblBtn"
+            app:layout_constraintEnd_toEndOf="@+id/heightLblBtn"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="@+id/heightLblBtn"
+            app:layout_constraintTop_toTopOf="@+id/heightLblBtn"
+            app:layout_constraintVertical_bias="0.562" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="38dp"
+            android:layout_height="34dp"
+            android:src="@drawable/baseline_navigate_next_24"
+            app:layout_constraintBottom_toBottomOf="@+id/heightLblBtn"
+            app:layout_constraintEnd_toEndOf="@+id/heightLblBtn"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="@+id/heightLblBtn"
+            app:layout_constraintTop_toTopOf="@+id/heightLblBtn"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/changePwBtn"
+            android:layout_width="343dp"
+            android:layout_height="51dp"
+            android:background="@drawable/rounded_item_list"
+            android:fontFamily="@font/sf_light"
+            android:gravity="center"
+            android:paddingStart="-50dp"
+            android:text="Change Password"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightLblBtn"
+            app:layout_constraintVertical_bias="0.228" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="37dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_lock_24"
+            app:layout_constraintBottom_toBottomOf="@+id/changePwBtn"
+            app:layout_constraintEnd_toEndOf="@+id/changePwBtn"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="@+id/changePwBtn"
+            app:layout_constraintTop_toTopOf="@+id/changePwBtn"
+            app:layout_constraintVertical_bias="0.562" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="38dp"
+            android:layout_height="34dp"
+            android:src="@drawable/baseline_navigate_next_24"
+            app:layout_constraintBottom_toBottomOf="@+id/changePwBtn"
+            app:layout_constraintEnd_toEndOf="@+id/changePwBtn"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="@+id/changePwBtn"
+            app:layout_constraintTop_toTopOf="@+id/changePwBtn"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/weightLblBtn"
+            android:layout_width="343dp"
+            android:layout_height="51dp"
+            android:background="@drawable/rounded_item_list"
+            android:fontFamily="@font/sf_light"
+            android:gravity="center"
+            android:paddingStart="-145dp"
+            android:text="Weight"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heightLblBtn"
+            app:layout_constraintVertical_bias="0.063" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="37dp"
+            android:layout_height="35dp"
+            android:src="@drawable/weight"
+            app:layout_constraintBottom_toBottomOf="@+id/weightLblBtn"
+            app:layout_constraintEnd_toEndOf="@+id/weightLblBtn"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="@+id/weightLblBtn"
+            app:layout_constraintTop_toTopOf="@+id/weightLblBtn"
+            app:layout_constraintVertical_bias="0.562" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="38dp"
+            android:layout_height="34dp"
+            android:src="@drawable/baseline_navigate_next_24"
+            app:layout_constraintBottom_toBottomOf="@+id/weightLblBtn"
+            app:layout_constraintEnd_toEndOf="@+id/weightLblBtn"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="@+id/weightLblBtn"
+            app:layout_constraintTop_toTopOf="@+id/weightLblBtn"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/logoutBtn"
+            android:layout_width="343dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/logout_btn"
+            android:fontFamily="@font/sf_bold"
+            android:gravity="center"
+            android:paddingStart="-145dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changePwBtn"
+            app:layout_constraintVertical_bias="0.795" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="36dp"
+            android:layout_height="34dp"
+            android:src="@drawable/baseline_logout_24"
+            app:layout_constraintBottom_toBottomOf="@+id/logoutBtn"
+            app:layout_constraintEnd_toEndOf="@+id/logoutBtn"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="@+id/logoutBtn"
+            app:layout_constraintTop_toTopOf="@+id/logoutBtn"
+            app:layout_constraintVertical_bias="0.529" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.bluejack23_1.wtgym.viewmodel.AccountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingTop="35dp"
+        bind:context=".view.SettingsFragment">
+
+
+        <TextView
+            android:id="@+id/titleLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_bold"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.008" />
+
+        <EditText
+            android:id="@+id/txtInput"
+            android:layout_width="332dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/rounded_item_list"
+            android:hint="Enter your name"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleLbl"
+            app:layout_constraintVertical_bias="0.091" />
+
+        <EditText
+            android:id="@+id/txtInput2"
+            android:layout_width="332dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/rounded_item_list"
+            android:hint="Enter your name"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInput"
+            app:layout_constraintVertical_bias="0.07" />
+
+        <EditText
+            android:id="@+id/txtInput3"
+            android:layout_width="332dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/rounded_item_list"
+            android:hint="Enter your name"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInput2"
+            app:layout_constraintVertical_bias="0.087" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="102dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/dark_input"
+            android:fontFamily="@font/sf_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saveBtn"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblErrorChange"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/primary_btn"
+            android:fontFamily="@font/sf_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblErrorChange"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <TextView
+            android:id="@+id/lblErrorChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_bold"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInput3"
+            app:layout_constraintVertical_bias="0.079" />
+
+        <TextView
+            android:id="@+id/messageLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_bold"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleLbl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
